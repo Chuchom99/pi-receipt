@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --bg-color: #e0e0e0;
+  --card-bg: #f5f5f5;
+  --details-bg: #dcdcdc;
+  --text-color: #444;
+  --highlight-color: #800080;
+  --link-color: #0066cc;
+  --header-bg: #800080;
+  --button-border: #800080;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode {
+  --bg-color: #333;
+  --card-bg: #222;
+  --details-bg: #444;
+  --text-color: #bbb;
+  --highlight-color: #bb86fc;
+  --link-color: #03dac6;
+  --header-bg: #6200ee;
+  --button-border: #bb86fc;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+.body {
+  font-family: "Mulish", sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 20% 8% 2%;
+  display: block;
+  height: 100vh;
+  overflow: visible;
+}
+
+.app-header {
+  background-color: var(--header-bg);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 7% 10%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: none;
+  min-height: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  position: relative;
+  background-clip: padding-box;
+  z-index: 1;
+}
+
+.close-icon {
+  text-align: right;
+  color: var(--text-color);
+  margin-right: -7%;
+  margin-top: -4%;
+}
+
+.pi-logo {
+    max-width: 100px; /* Maximum width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo */
+    display: block; /* Ensure it behaves as a block element for centering */
+  }
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Mulish", sans-serif;
+  color: var(--text-color);
+  font-style: normal;
+  margin: 10px 0;
+}
+
+.details-card {
+  background: var(--details-bg);
+  padding: 14px 10px;
+  border-radius: 8px;
+}
+
+.detail-head {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 5px 0;
+}
+
+.amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 10px 0;
+  word-break: break-word;
+}
+
+.detail-time {
+  margin: 12px 0;
+  color: var(--text-color);
+}
+
+.detail-reciver {
+  text-align: left;
+  color: var(--text-color);
+
+}
+
+.highlight {
+  color: var(--highlight-color);
+  text-decoration: underline;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 13px;
+  font-size: 14px;
+  color: var(--text-color);
+  border-bottom: 0.5px solid var(--details-bg);
+}
+
+.link-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 13px;
+  color: var(--text-color);
+
+}
+
+.link {
+  color: var(--link-color);
+  text-decoration: none;
+  text-align: left;
+}
+
+.button {
+  background-color: inherit;
+  color: var(--highlight-color);
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--button-border);
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+@media (max-width: 480px) {
+    .pi-logo {
+      max-width: 80px; /* Reduce size on small screens */
+    }
+  }
+  
+  /* Media query for very small screens (e.g., tiny phones) */
+  @media (max-width: 320px) {
+    .pi-logo {
+      max-width: 60px; /* Further reduce size if needed */
+    }
+  }
